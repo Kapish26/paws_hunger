@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paws_hunger/pages/animal_details_page.dart';
 import 'package:paws_hunger/pages/landing_page.dart';
 
 void main() {

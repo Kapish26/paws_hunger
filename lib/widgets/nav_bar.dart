@@ -5,18 +5,26 @@ import 'package:paws_hunger/constants/icons/paws_hunger_icons.dart';
 import 'package:paws_hunger/constants/text_styles.dart';
 
 class NavBar extends StatelessWidget {
-  const NavBar({
+   NavBar({
     Key? key,
-    required this.selection,
-    required this.pages,
   }) : super(key: key);
 
-  final ValueNotifier<int> selection;
-  final List<String> pages;
+  final List<String> pages = [
+  'Home',
+  'Community',
+  'Guidelines',
+  'Help',
+  'Contact Us',
+  'Locate Shelter',
+  ];
 
+  final ValueNotifier<int> selection = ValueNotifier<int>(0);
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      iconTheme: IconThemeData(
+        color: Colors.black,
+      ),
       elevation: 0,
       backgroundColor: Colors.transparent,
       title: Row(
@@ -27,8 +35,10 @@ class NavBar extends StatelessWidget {
               Transform(
                 transform: Matrix4.translationValues(0, -5, 0),
                 child: Icon(
+
                   PawsHunger.paws_hunger,
                   color: Colors.black,
+
                   size: 30,
                 ),
               ),

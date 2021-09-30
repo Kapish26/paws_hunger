@@ -4,21 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:paws_hunger/constants/icons/paws_hunger_icons.dart';
 import 'package:paws_hunger/constants/response.dart';
 import 'package:paws_hunger/constants/text_styles.dart';
+import 'package:paws_hunger/pages/animal_details_page.dart';
+import 'package:paws_hunger/pages/animal_details_page.dart';
+import 'package:paws_hunger/pages/animal_details_page.dart';
 import 'package:paws_hunger/widgets/animal_information_card.dart';
 import 'package:paws_hunger/widgets/nav_bar.dart';
 
 class LandingPage extends StatelessWidget {
   LandingPage({Key? key}) : super(key: key);
-  final List<String> pages = [
-    'Home',
-    'Community',
-    'Guidelines',
-    'Help',
-    'Contact Us',
-    'Locate Shelter',
-  ];
-
-  final ValueNotifier<int> selection = ValueNotifier<int>(0);
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +41,7 @@ class LandingPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      NavBar(selection: selection, pages: pages),
+                      NavBar(),
                       SizedBox(
                         height: 50,
                       ),
@@ -117,18 +110,35 @@ class LandingPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           GestureDetector(
-                            onTap : () {},
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          AnimalDetailsPage()));
+                            },
                             child: AnimalInformationCard(),
                           ),
                           GestureDetector(
-                            onTap : () {},
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          AnimalDetailsPage()));
+                            },
                             child: AnimalInformationCard(),
                           ),
                           GestureDetector(
-                            onTap : () {},
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          AnimalDetailsPage()));
+                            },
                             child: AnimalInformationCard(),
                           ),
-
                         ],
                       ),
                       SizedBox(
@@ -138,18 +148,35 @@ class LandingPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           GestureDetector(
-                            onTap : () {},
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          AnimalDetailsPage()));
+                            },
                             child: AnimalInformationCard(),
                           ),
                           GestureDetector(
-                            onTap : () {},
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          AnimalDetailsPage()));
+                            },
                             child: AnimalInformationCard(),
                           ),
                           GestureDetector(
-                            onTap : () {},
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          AnimalDetailsPage()));
+                            },
                             child: AnimalInformationCard(),
                           ),
-
                         ],
                       ),
                       SizedBox(
