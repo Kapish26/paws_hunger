@@ -1,1 +1,6 @@
-{}
+{
+  "projects": {
+    "development": "paws-hunger"
+  },
+  "targets": {}
+}
